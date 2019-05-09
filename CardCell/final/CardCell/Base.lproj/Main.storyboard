@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mcB-4t-GHA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Table View Controller-->
+        <scene sceneID="CWk-Z6-AYo">
+            <objects>
+                <tableViewController id="mcB-4t-GHA" customClass="CardTableViewController" customModule="CardCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ktv-vk-3Ub">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardTableViewCell" id="4YU-V0-hoM" customClass="CardTableViewCell" customModule="CardCell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4YU-V0-hoM" id="co9-U3-3hf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsP-hg-5hz" userLabel="Card View">
+                                            <rect key="frame" x="20" y="20" width="335" height="260"/>
+                                            <color key="backgroundColor" red="0.93392665330000002" green="1" blue="0.4044215867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="DsP-hg-5hz" secondAttribute="bottom" constant="20" id="7Mk-u5-F13"/>
+                                        <constraint firstAttribute="trailing" secondItem="DsP-hg-5hz" secondAttribute="trailing" constant="20" id="AK6-b2-oEA"/>
+                                        <constraint firstItem="DsP-hg-5hz" firstAttribute="top" secondItem="co9-U3-3hf" secondAttribute="top" constant="20" id="INt-xg-ZgR"/>
+                                        <constraint firstItem="DsP-hg-5hz" firstAttribute="leading" secondItem="co9-U3-3hf" secondAttribute="leading" constant="20" id="cQs-bK-brz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cardView" destination="DsP-hg-5hz" id="i3R-1S-DQ8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mcB-4t-GHA" id="ck1-L7-fMl"/>
+                            <outlet property="delegate" destination="mcB-4t-GHA" id="HJU-t2-ly1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkp-TT-GjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="18"/>
+        </scene>
+    </scenes>
+</document>

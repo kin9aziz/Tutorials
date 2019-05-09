@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-L4-Ips">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uf9-LW-tTb"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Photo Library" id="wLy-L8-DYL">
+                                        <connections>
+                                            <action selector="showImagePickerForPhotoPicker:" destination="BYZ-38-t0r" id="b8y-Uf-KUY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="Z4M-Hy-Kls"/>
+                                    <barButtonItem systemItem="camera" id="QIm-8s-put">
+                                        <connections>
+                                            <action selector="showImagePickerForCamera:" destination="BYZ-38-t0r" id="Zso-Yg-Yvf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N6q-4h-HEt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXi-L4-Ips" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4VP-gi-78Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N6q-4h-HEt" secondAttribute="trailing" id="8lk-lI-rbN"/>
+                            <constraint firstItem="bXi-L4-Ips" firstAttribute="top" secondItem="N6q-4h-HEt" secondAttribute="bottom" id="AFS-aR-gnQ"/>
+                            <constraint firstItem="bXi-L4-Ips" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Aun-B6-XMg"/>
+                            <constraint firstItem="bXi-L4-Ips" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nmj-61-FmF"/>
+                            <constraint firstItem="N6q-4h-HEt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UTQ-j1-TbG"/>
+                            <constraint firstItem="N6q-4h-HEt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V8a-J6-DRg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="N6q-4h-HEt" id="x8y-rc-Vbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

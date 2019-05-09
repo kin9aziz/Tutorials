@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hfO-K0-PBV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Noti View Controller-->
+        <scene sceneID="c66-By-AOf">
+            <objects>
+                <viewController id="hfO-K0-PBV" customClass="AlertNotiViewController" customModule="UserNoti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrH-Db-cQN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2He-eA-4eZ">
+                                <rect key="frame" x="20" y="130" width="335" height="100"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Uqg-rk-wr5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwi-vo-CyI">
+                                <rect key="frame" x="102.5" y="86" width="170" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Device Token"/>
+                                <connections>
+                                    <action selector="showDeviceToken:" destination="hfO-K0-PBV" eventType="touchUpInside" id="8TC-LO-Jx1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBK-H6-o8J">
+                                <rect key="frame" x="20" y="363" width="335" height="100"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ezr-VY-pUB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBK-zd-xYp">
+                                <rect key="frame" x="61" y="307" width="253" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Schedule a Local Notification"/>
+                                <connections>
+                                    <action selector="scheduleALocalNotification:" destination="hfO-K0-PBV" eventType="touchUpInside" id="ov7-ea-aO5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bwi-vo-CyI" firstAttribute="top" secondItem="gpp-b7-nws" secondAttribute="top" constant="66" id="DpH-1S-ZSb"/>
+                            <constraint firstItem="2He-eA-4eZ" firstAttribute="leading" secondItem="gpp-b7-nws" secondAttribute="leading" constant="20" id="GTo-4X-y5W"/>
+                            <constraint firstItem="aBK-H6-o8J" firstAttribute="leading" secondItem="gpp-b7-nws" secondAttribute="leading" constant="20" id="Gtu-Jk-d3F"/>
+                            <constraint firstItem="Bwi-vo-CyI" firstAttribute="centerX" secondItem="wrH-Db-cQN" secondAttribute="centerX" id="Hdl-RZ-aFr"/>
+                            <constraint firstItem="gpp-b7-nws" firstAttribute="trailing" secondItem="aBK-H6-o8J" secondAttribute="trailing" constant="20" id="PPZ-60-Y2x"/>
+                            <constraint firstItem="2He-eA-4eZ" firstAttribute="top" secondItem="Bwi-vo-CyI" secondAttribute="bottom" constant="8" id="SNq-tZ-fa6"/>
+                            <constraint firstItem="aBK-H6-o8J" firstAttribute="top" secondItem="gBK-zd-xYp" secondAttribute="bottom" constant="20" id="UPN-PQ-6TF"/>
+                            <constraint firstItem="gpp-b7-nws" firstAttribute="trailing" secondItem="2He-eA-4eZ" secondAttribute="trailing" constant="20" id="Xr4-xb-Mka"/>
+                            <constraint firstItem="gBK-zd-xYp" firstAttribute="centerX" secondItem="wrH-Db-cQN" secondAttribute="centerX" id="Y69-wy-SmH"/>
+                            <constraint firstItem="gBK-zd-xYp" firstAttribute="top" secondItem="2He-eA-4eZ" secondAttribute="bottom" constant="77" id="o3S-UH-9cn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gpp-b7-nws"/>
+                    </view>
+                    <connections>
+                        <outlet property="deviceTokenLabel" destination="2He-eA-4eZ" id="fHu-fK-6Ob"/>
+                        <outlet property="infoLabel" destination="aBK-H6-o8J" id="xiL-hR-mht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDg-3d-C9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="82"/>
+        </scene>
+    </scenes>
+</document>
