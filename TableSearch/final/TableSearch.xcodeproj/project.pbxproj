@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		043AB6AE1B6FD7F200807DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AB6A81B6FD7F200807DC3 /* AppDelegate.swift */; };
-		043AB6AF1B6FD7F200807DC3 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AB6A91B6FD7F200807DC3 /* BaseTableViewController.swift */; };
 		043AB6B11B6FD7F200807DC3 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AB6AB1B6FD7F200807DC3 /* MainTableViewController.swift */; };
 		043AB6B21B6FD7F200807DC3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AB6AC1B6FD7F200807DC3 /* Product.swift */; };
 		043AB6B31B6FD7F200807DC3 /* ResultsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AB6AD1B6FD7F200807DC3 /* ResultsTableController.swift */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		043AB6A81B6FD7F200807DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TableSearch/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		043AB6A91B6FD7F200807DC3 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = TableSearch/BaseTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		043AB6AB1B6FD7F200807DC3 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = TableSearch/MainTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		043AB6AC1B6FD7F200807DC3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = TableSearch/Product.swift; sourceTree = SOURCE_ROOT; };
 		043AB6AD1B6FD7F200807DC3 /* ResultsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsTableController.swift; path = TableSearch/ResultsTableController.swift; sourceTree = SOURCE_ROOT; };
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				043AB6A81B6FD7F200807DC3 /* AppDelegate.swift */,
-				043AB6A91B6FD7F200807DC3 /* BaseTableViewController.swift */,
 				043AB6AB1B6FD7F200807DC3 /* MainTableViewController.swift */,
 				043AB6AD1B6FD7F200807DC3 /* ResultsTableController.swift */,
 				043AB6AC1B6FD7F200807DC3 /* Product.swift */,
@@ -162,7 +159,6 @@
 				043AB6B11B6FD7F200807DC3 /* MainTableViewController.swift in Sources */,
 				043AB6B21B6FD7F200807DC3 /* Product.swift in Sources */,
 				043AB6B31B6FD7F200807DC3 /* ResultsTableController.swift in Sources */,
-				043AB6AF1B6FD7F200807DC3 /* BaseTableViewController.swift in Sources */,
 				043AB6AE1B6FD7F200807DC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

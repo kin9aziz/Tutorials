@@ -5,7 +5,20 @@
 
 import UIKit
 
-class ResultsTableController: BaseTableViewController {
+class ResultsTableController: UITableViewController {
+  
+  var filteredProducts = [Product]()
+  
+  let tableViewCellIdentifier = "cellID"
+  let tableViewCellName = "TableCell"
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let nib = UINib(nibName: tableViewCellName, bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
+  }
+  
   
   // MARK: - UITableViewDataSource
   
@@ -14,9 +27,9 @@ class ResultsTableController: BaseTableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: BaseTableViewController.tableViewCellIdentifier, for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath)
     let product = filteredProducts[indexPath.row]
-    configureCell(cell, forProduct: product)
+    cell.textLabel?.text = product.title
     
     return cell
   }

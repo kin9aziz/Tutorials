@@ -5,26 +5,24 @@
 
 import UIKit
 
-class MainTableViewController: BaseTableViewController {
+class MainTableViewController: UITableViewController {
   
   let products = [
-    Product(title: "Ginger", yearIntroduced: 2007, introPrice: 49.98),
-    Product(title: "Gladiolus", yearIntroduced: 2001, introPrice: 51.99),
-    Product(title: "Orchid", yearIntroduced: 2007, introPrice: 16.99),
-    Product(title: "Poinsettia", yearIntroduced: 2010, introPrice: 31.99),
-    Product(title: "Red Rose", yearIntroduced: 2010, introPrice: 24.99),
-    Product(title: "White Rose", yearIntroduced: 2012, introPrice: 24.99),
-    Product(title: "Tulip", yearIntroduced: 1997, introPrice: 39.99),
-    Product(title: "Carnation", yearIntroduced: 2006, introPrice: 23.99),
-    Product(title: "Sunflower", yearIntroduced: 2008, introPrice: 25.00),
-    Product(title: "Gardenia", yearIntroduced: 2006, introPrice: 25.00)
+    Product(title: "Ginger"),
+    Product(title: "Gladiolus"),
+    Product(title: "Orchid"),
+    Product(title: "Poinsettia"),
+    Product(title: "Red Rose"),
+    Product(title: "White Rose"),
+    Product(title: "Tulip"),
+    Product(title: "Carnation"),
+    Product(title: "Sunflower"),
+    Product(title: "Gardenia")
   ]
   
   /// NSPredicate expression keys.
   private enum ExpressionKeys: String {
     case title
-    case yearIntroduced
-    case introPrice
   }
   
   /// Search controller to help us with filtering.
@@ -33,11 +31,16 @@ class MainTableViewController: BaseTableViewController {
   /// Secondary search results table view.
   private var resultsTableController: ResultsTableController!
   
+  let tableViewCellIdentifier = "cellID"
+  let tableViewCellName = "TableCell"
+  
   // MARK: - View Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    let nib = UINib(nibName: tableViewCellName, bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
   }
   
 }
@@ -50,10 +53,10 @@ extension MainTableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: BaseTableViewController.tableViewCellIdentifier, for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath)
     
     let product = products[indexPath.row]
-    configureCell(cell, forProduct: product)
+    cell.textLabel?.text = product.title
     
     return cell
   }
