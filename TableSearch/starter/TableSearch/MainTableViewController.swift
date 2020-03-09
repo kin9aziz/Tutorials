@@ -7,7 +7,7 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
   
-  let products = [
+  let flowers = [
     Product(title: "Ginger"),
     Product(title: "Gladiolus"),
     Product(title: "Orchid"),
@@ -49,25 +49,16 @@ class MainTableViewController: UITableViewController {
 extension MainTableViewController {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return products.count
+    return flowers.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath)
     
-    let product = products[indexPath.row]
+    let product = flowers[indexPath.row]
     cell.textLabel?.text = product.title
     
     return cell
-  }
-  
-}
-
-// MARK: - UISearchBarDelegate
-extension MainTableViewController: UISearchBarDelegate {
-  
-  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-    searchBar.resignFirstResponder()
   }
   
 }
