@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/quangtran/iOS/PlaySongListAndLoop/PlaySongListAndLoop.xcodeproj">
+      location = "self:/Users/quangtran/iOS/Tutorials/LoopPlaylist/LoopPlaylist/LoopPlaylist.xcodeproj">
    </FileRef>
 </Workspace>
